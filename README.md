@@ -125,6 +125,14 @@ are subject to the ADNI Data Use Agreement; they cannot be redistributed openly.
 See `data/DATA_AVAILABILITY.md`. All analysis **code** in
 this repository is openly available.
 
+## Citation
+
+If you use this code or the preprocessing pipelines, please cite the associated article:
+
+> Vajda, B., et al. (2026). *Preprocessing changes diffusion-MRI values but not Alzheimer's-disease inference: a within-subject common-mode analysis.* Imaging Neuroscience. DOI: to be added on publication.
+
+A machine-readable citation is provided in `CITATION.cff` (GitHub shows a **Cite this repository** button).
+
 ## License
 
 Code is released under the MIT License (`LICENSE`). The data are governed by the

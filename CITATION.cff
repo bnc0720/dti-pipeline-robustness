@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code or the preprocessing pipelines, please cite the associated article below."
+title: "Reproducible analysis: DTI preprocessing-pipeline robustness in Alzheimer's disease"
+authors:
+  - family-names: Vajda
+    given-names: Bence
+    affiliation: University of Debrecen
+preferred-citation:
+  type: article
+  title: "Preprocessing changes diffusion-MRI values but not Alzheimer's-disease inference: a within-subject common-mode analysis"
+  authors:
+    - family-names: Vajda
+      given-names: Bence
+      affiliation: University of Debrecen
+    # - family-names: <SURNAME>   # <-- ADD co-authors / supervisor here
+    #   given-names: <Given>
+  journal: "Imaging Neuroscience"
+  year: 2026
+  doi: ""   # <-- ADD the article DOI on publication
