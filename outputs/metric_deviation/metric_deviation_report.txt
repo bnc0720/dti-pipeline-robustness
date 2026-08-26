@@ -1,0 +1,14 @@
+PER-METRIC PIPELINE-INDUCED DEVIATION SUMMARY
+======================================================================
+Magnitude of the deviation caused by changing the preprocessing pipeline,
+summarised per metric (from committed RQ1/RQ2/variance outputs).
+
+metric  mean|Δ%|   max|Δ%|    CV%   var%      signed medians (02-01/03-01/03-02)    FDR-sig
+FA         3.91%     8.04%  3.42%  11.2%    -2.84/  -5.70/  -3.29 %   29/30 
+MD         0.71%     3.52%  1.32%   1.0%    -0.27/  -0.26/  +0.01 %    8/30 
+RD         1.86%     6.26%  2.32%   1.9%    +0.85/  +2.24/  +1.53 %   21/30 
+AD         2.04%     5.94%  1.91%   6.7%    -1.60/  -2.95/  -1.04 %   27/30 
+
+Interpretation: FA shows the largest pipeline-induced deviation, MD the
+smallest; RD and AD intermediate. CV% and variance% tell the same story.
+All values derive from the master CSV via the committed pipeline.

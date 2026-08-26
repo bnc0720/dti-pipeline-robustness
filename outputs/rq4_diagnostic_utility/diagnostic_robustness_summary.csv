@@ -1,0 +1,2 @@
+n_biomarkers,mean_auc_all_biomarkers,median_auc_all_biomarkers,mean_auc_range_all_biomarkers,median_auc_range_all_biomarkers,n_mean_auc_ge_0_70,n_mean_auc_ge_0_75,n_mean_auc_ge_0_80,n_auc_range_le_0_05,n_auc_range_le_0_10
+40,0.6314074074074074,0.6185185185185185,0.04455555555555555,0.03555555555555556,9,4,0,27,38

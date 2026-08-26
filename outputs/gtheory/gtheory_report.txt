@@ -1,0 +1,15 @@
+GENERALIZABILITY THEORY (subject x pipeline, single-facet crossed)
+==========================================================================
+G(1)=relative reliability (=consistency ICC), Phi(1)=absolute dependability (=absolute ICC).
+D-study Phi(k)=dependability when averaging k pipelines. Bootstrap 95% CI (subjects).
+
+metric             G(1)           Phi(1)    gap  pipe%  Phi(2)  Phi(3)  k->0.90
+FA     0.922[0.89-0.94] 0.782[0.72-0.82]  0.140  15.1%   0.877   0.914        3
+MD     0.953[0.93-0.97] 0.941[0.91-0.96]  0.011   1.2%   0.969   0.979        1
+RD     0.947[0.92-0.96] 0.923[0.89-0.94]  0.024   2.6%   0.959   0.973        1
+AD     0.925[0.88-0.94] 0.841[0.77-0.87]  0.084   9.1%   0.913   0.940        2
+
+Read-off: relative reliability is excellent for every metric (single pipeline
+ranks subjects reliably). Absolute dependability is metric-dependent: FA and AD
+carry a large pipeline-facet penalty (gap), MD/RD almost none. Averaging pipelines
+(D-study) restores FA absolute dependability from ~0.78 (1) to ~0.91 (3 pipelines).

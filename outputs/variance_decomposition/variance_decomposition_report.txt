@@ -1,0 +1,30 @@
+VARIANCE DECOMPOSITION REPORT (eta^2, % of total sum of squares)
+================================================================================
+Primary feature: mean
+Per biomarker: balanced split-plot SS partition; values are the
+mean of the 40 per-biomarker eta^2 values (metrics share no common
+raw scale, so percentages are averaged rather than pooled).
+
+OVERALL (mean across 40 biomarkers)
+--------------------------------------------------------------------------------
+  individual  : 84.309 %
+  disease     :  6.562 %
+  pipeline    :  5.177 %
+  interaction :  0.144 %
+  residual    :  3.808 %
+  biological  : 90.871 %  (individual + disease)
+
+BY METRIC
+--------------------------------------------------------------------------------
+  FA : pipeline=11.160%  interaction= 0.147%  biological=84.223%  residual=4.470%
+  MD : pipeline= 0.954%  interaction= 0.122%  biological=95.942%  residual=2.982%
+  RD : pipeline= 1.929%  interaction= 0.104%  biological=94.630%  residual=3.336%
+  AD : pipeline= 6.664%  interaction= 0.203%  biological=88.689%  residual=4.444%
+
+INTERPRETATION
+--------------------------------------------------------------------------------
+Pipeline contributes a small fraction of total variance; the
+Group x Pipeline interaction is negligible (~0.14%). Preprocessing
+variance is therefore largely common-mode: it inflates absolute
+values while leaving the disease contrast intact. FA is the most
+pipeline-sensitive metric; MD and RD are the most robust.

@@ -1,0 +1,3 @@
+feature,n_interaction_tests,n_fdr_significant_interactions,percent_fdr_significant_interactions,same_direction_percent,mean_abs_g,mean_range_abs_g,mean_relative_range_abs_g_percent,mean_ranking_spearman_rho
+mean,80,0,0.0,87.5,0.44893932337124187,0.1484676216159133,62.36975954590004,0.9036898061288307
+proximal_mean,78,2,2.564102564102564,90.0,0.5150664345702317,0.2090956421311787,56.129366728295224,0.8280800500312697

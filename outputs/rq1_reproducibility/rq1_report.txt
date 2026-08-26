@@ -1,0 +1,55 @@
+RQ1 REPRODUCIBILITY REPORT
+================================================================================
+
+Kutatási kérdés:
+Mennyire reprodukálhatók a tractometriai biomarkerek különböző preprocessing pipeline-ok között?
+
+Módszerek:
+- ICC(3,1): two-way mixed, consistency, single measurement
+- CV%: alanyon belüli variabilitás a három pipeline között
+- Pairwise Pearson/Spearman korrelációk
+- Bland–Altman bias és limits of agreement
+
+FEATURE-LEVEL REPRODUCIBILITY
+--------------------------------------------------------------------------------
+mean: mean ICC=0.937, median ICC=0.947, mean CV=2.24%, good/excellent ICC=100.0% (40/40)
+median: mean ICC=0.919, median ICC=0.925, mean CV=2.34%, good/excellent ICC=100.0% (40/40)
+middle_mean: mean ICC=0.899, median ICC=0.902, mean CV=2.63%, good/excellent ICC=100.0% (40/40)
+distal_mean: mean ICC=0.860, median ICC=0.903, mean CV=3.42%, good/excellent ICC=85.0% (34/40)
+proximal_mean: mean ICC=0.844, median ICC=0.873, mean CV=2.71%, good/excellent ICC=82.5% (33/40)
+sd: mean ICC=0.826, median ICC=0.862, mean CV=10.00%, good/excellent ICC=80.0% (32/40)
+
+TRACT-LEVEL REPRODUCIBILITY
+--------------------------------------------------------------------------------
+CC_2: mean ICC=0.955, median ICC=0.964, mean CV=2.62%
+ILF_left: mean ICC=0.917, median ICC=0.921, mean CV=4.34%
+IFO_left: mean ICC=0.907, median ICC=0.930, mean CV=3.71%
+IFO_right: mean ICC=0.905, median ICC=0.915, mean CV=3.73%
+UF_left: mean ICC=0.905, median ICC=0.911, mean CV=3.34%
+CG_right: mean ICC=0.887, median ICC=0.898, mean CV=3.40%
+UF_right: mean ICC=0.879, median ICC=0.898, mean CV=3.89%
+ILF_right: mean ICC=0.841, median ICC=0.895, mean CV=5.13%
+CC_7: mean ICC=0.813, median ICC=0.833, mean CV=4.75%
+CG_left: mean ICC=0.800, median ICC=0.825, mean CV=3.97%
+
+METRIC-LEVEL REPRODUCIBILITY
+--------------------------------------------------------------------------------
+MD: mean ICC=0.906, median ICC=0.935, mean CV=3.44%
+RD: mean ICC=0.886, median ICC=0.914, mean CV=4.37%
+AD: mean ICC=0.882, median ICC=0.893, mean CV=3.20%
+FA: mean ICC=0.850, median ICC=0.875, mean CV=4.55%
+
+INTERPRETÁCIÓS MEGJEGYZÉS
+--------------------------------------------------------------------------------
+Az RQ1 elemzés célja annak meghatározása, hogy a pipeline választása mellett a biomarkerek mennyire stabilak. A magas ICC azt jelzi, hogy a pipeline-ok hasonlóan rangsorolják az alanyokat, míg az alacsony CV kis abszolút pipeline-közti eltérést jelez.
+
+Az ICC kategóriák értelmezése: <0.50 poor, 0.50–0.75 moderate, 0.75–0.90 good, >0.90 excellent.
+
+Kimeneti fájlok:
+- bland_altman_all_features.csv
+- cv_all_features.csv
+- feature_reproducibility_summary.csv
+- icc_all_features.csv
+- metric_reproducibility_summary.csv
+- pairwise_correlations_all_features.csv
+- tract_reproducibility_summary.csv

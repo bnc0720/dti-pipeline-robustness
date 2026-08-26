@@ -1,0 +1,20 @@
+ICC: CONSISTENCY (3,1) vs ABSOLUTE AGREEMENT (2,1)
+================================================================================
+Primary feature: mean   |   biomarkers: 40
+Mean consistency  ICC(3,1) = 0.937
+Mean absolute     ICC(2,1) = 0.872
+Biomarkers below 'good' (0.75): consistency 0/40, absolute 4/40
+
+BY METRIC
+--------------------------------------------------------------------------------
+  FA : ICC(3,1)=0.922  ->  ICC(2,1)=0.782
+  MD : ICC(3,1)=0.953  ->  ICC(2,1)=0.942
+  RD : ICC(3,1)=0.947  ->  ICC(2,1)=0.923
+  AD : ICC(3,1)=0.925  ->  ICC(2,1)=0.841
+
+INTERPRETATION
+--------------------------------------------------------------------------------
+Absolute agreement is lower than consistency for the metrics with the
+largest systematic pipeline offsets (FA, AD) and essentially unchanged
+for MD/RD. RQ1 is therefore framed as high reproducibility of subject
+RANKING rather than of absolute values.

@@ -1,0 +1,7 @@
+feature,top_k,overlap_pipeline01_02,overlap_pipeline01_03,overlap_pipeline02_03,overlap_all_three,overlap_all_three_percent
+mean,5,3,5,3,3,60.0
+mean,10,9,8,9,8,80.0
+mean,15,13,12,13,12,80.0
+proximal_mean,5,3,3,3,3,60.0
+proximal_mean,10,8,7,7,6,60.0
+proximal_mean,15,12,11,13,11,73.33333333333333

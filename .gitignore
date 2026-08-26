@@ -1,0 +1,14 @@
+# ── ADNI-derived per-subject data — governed by the ADNI Data Use Agreement, NOT redistributable ──
+/data/*.csv
+
+# ── Internal working documents — not part of the public code release ──
+/STATEMENTS.md
+/COMPLIANCE_Imaging_Neuroscience_HU.md
+/README.md.bak
+*.stale_bak
+
+# ── Python caches / OS cruft ──
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db

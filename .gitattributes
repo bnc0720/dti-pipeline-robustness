@@ -1,0 +1,7 @@
+# Normalize line endings across platforms.
+# Keep all text as LF in the repository; shell scripts MUST stay LF to run on Linux.
+* text=auto eol=lf
+
+# Binary assets — never touch
+*.png binary
+*.pdf binary

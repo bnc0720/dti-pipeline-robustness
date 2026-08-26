@@ -1,0 +1,92 @@
+RQ4 DIAGNOSTIC UTILITY REPORT
+================================================================================
+
+Kutatási kérdés:
+Megváltoztatja-e a preprocessing pipeline a diagnosztikai teljesítményt?
+
+Primer elemzés:
+- Feature: mean
+- Biomarkerek: 10 tract × 4 metric = 40 biomarker
+- Minden biomarkerre pipeline-onként ROC-AUC + bootstrap 95% CI
+- Diagnosztikai robusztusság: mean AUC, AUC range, AUC SD
+
+Fontos módszertani megjegyzés:
+A ROC-görbékhez kiválasztott biomarkerek az RQ3 biológiai robusztussági eredményei alapján kerültek kiválasztásra, nem az AUC alapján.
+
+OVERALL DIAGNOSTIC ROBUSTNESS
+--------------------------------------------------------------------------------
+Number of biomarkers: 40
+Mean AUC across biomarkers: 0.631
+Median AUC across biomarkers: 0.619
+Mean AUC range across pipelines: 0.045
+Median AUC range across pipelines: 0.036
+Biomarkers with mean AUC ≥ 0.70: 9/40
+Biomarkers with mean AUC ≥ 0.75: 4/40
+Biomarkers with mean AUC ≥ 0.80: 0/40
+Biomarkers with AUC range ≤ 0.05: 27/40
+Biomarkers with AUC range ≤ 0.10: 38/40
+
+METRIC-LEVEL DIAGNOSTIC SUMMARY
+--------------------------------------------------------------------------------
+RD: mean AUC=0.653, median AUC=0.660, mean AUC range=0.040, AUC≥0.75=3/10
+FA: mean AUC=0.639, median AUC=0.630, mean AUC range=0.044, AUC≥0.75=0/10
+MD: mean AUC=0.627, median AUC=0.600, mean AUC range=0.030, AUC≥0.75=1/10
+AD: mean AUC=0.607, median AUC=0.613, mean AUC range=0.064, AUC≥0.75=0/10
+
+TRACT-LEVEL DIAGNOSTIC SUMMARY
+--------------------------------------------------------------------------------
+UF_right: mean AUC=0.723, median AUC=0.743, mean AUC range=0.047, AUC≥0.75=2/4
+ILF_left: mean AUC=0.708, median AUC=0.715, mean AUC range=0.053, AUC≥0.75=1/4
+UF_left: mean AUC=0.699, median AUC=0.728, mean AUC range=0.048, AUC≥0.75=1/4
+CC_2: mean AUC=0.651, median AUC=0.654, mean AUC range=0.039, AUC≥0.75=0/4
+CG_left: mean AUC=0.641, median AUC=0.648, mean AUC range=0.027, AUC≥0.75=0/4
+CG_right: mean AUC=0.637, median AUC=0.644, mean AUC range=0.059, AUC≥0.75=0/4
+ILF_right: mean AUC=0.613, median AUC=0.608, mean AUC range=0.049, AUC≥0.75=0/4
+IFO_left: mean AUC=0.577, median AUC=0.587, mean AUC range=0.051, AUC≥0.75=0/4
+CC_7: mean AUC=0.549, median AUC=0.546, mean AUC range=0.056, AUC≥0.75=0/4
+IFO_right: mean AUC=0.517, median AUC=0.517, mean AUC range=0.018, AUC≥0.75=0/4
+
+TOP DIAGNOSTICALLY ROBUST BIOMARKERS
+--------------------------------------------------------------------------------
+UF_left_RD: mean AUC=0.756, AUC range=0.022, P01=0.760, P02=0.742, P03=0.764
+UF_left_MD: mean AUC=0.724, AUC range=0.009, P01=0.724, P02=0.720, P03=0.729
+CG_left_FA: mean AUC=0.711, AUC range=0.013, P01=0.702, P02=0.716, P03=0.716
+ILF_left_RD: mean AUC=0.757, AUC range=0.027, P01=0.769, P02=0.742, P03=0.760
+UF_right_RD: mean AUC=0.781, AUC range=0.031, P01=0.769, P02=0.773, P03=0.800
+UF_right_MD: mean AUC=0.754, AUC range=0.036, P01=0.738, P02=0.751, P03=0.773
+ILF_left_MD: mean AUC=0.739, AUC range=0.036, P01=0.756, P02=0.720, P03=0.742
+CG_left_RD: mean AUC=0.680, AUC range=0.036, P01=0.662, P02=0.698, P03=0.680
+IFO_left_FA: mean AUC=0.597, AUC range=0.013, P01=0.591, P02=0.596, P03=0.604
+CC_2_MD: mean AUC=0.667, AUC range=0.036, P01=0.689, P02=0.658, P03=0.653
+UF_right_FA: mean AUC=0.732, AUC range=0.053, P01=0.729, P02=0.707, P03=0.760
+CG_right_MD: mean AUC=0.579, AUC range=0.022, P01=0.569, P02=0.578, P03=0.591
+CC_2_AD: mean AUC=0.680, AUC range=0.044, P01=0.702, P02=0.658, P03=0.680
+ILF_right_MD: mean AUC=0.621, AUC range=0.036, P01=0.636, P02=0.600, P03=0.627
+CC_2_FA: mean AUC=0.615, AUC range=0.031, P01=0.627, P02=0.596, P03=0.622
+
+RQ3-SELECTED ROBUST BIOMARKERS FOR ROC VISUALIZATION
+--------------------------------------------------------------------------------
+UF_left_RD: mean AUC=0.756, AUC range=0.022, P01=0.760, P02=0.742, P03=0.764
+UF_left_MD: mean AUC=0.724, AUC range=0.009, P01=0.724, P02=0.720, P03=0.729
+UF_right_RD: mean AUC=0.781, AUC range=0.031, P01=0.769, P02=0.773, P03=0.800
+UF_right_MD: mean AUC=0.754, AUC range=0.036, P01=0.738, P02=0.751, P03=0.773
+UF_right_FA: mean AUC=0.732, AUC range=0.053, P01=0.729, P02=0.707, P03=0.760
+UF_left_FA: mean AUC=0.732, AUC range=0.058, P01=0.756, P02=0.698, P03=0.742
+
+INTERPRETÁCIÓS MEGJEGYZÉS
+--------------------------------------------------------------------------------
+Az RQ4 eredmények értelmezésekor az AUC abszolút nagysága mellett az AUC range kulcsfontosságú, mert ez mutatja meg, hogy a pipeline-választás mennyire változtatja meg a diagnosztikai teljesítményt.
+
+A teljes elemzés minden biomarkerre lefutott. A ROC-görbék ábrázolása csak a kézirat olvashatósága miatt korlátozódik az RQ3-ban előre azonosított robusztus biomarkerekre.
+
+Kimeneti fájlok:
+- auc_by_pipeline.csv
+- auc_stability_summary.csv
+- diagnostic_robustness_summary.csv
+- figure_auc_stability_data.csv
+- metric_diagnostic_summary.csv
+- roc_curve_points.csv
+- selected_robust_biomarkers_auc.csv
+- selected_roc_curve_points.csv
+- top_auc_biomarkers.csv
+- tract_diagnostic_summary.csv

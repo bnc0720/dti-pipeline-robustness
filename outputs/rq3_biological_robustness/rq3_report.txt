@@ -1,0 +1,66 @@
+RQ3 BIOLOGICAL ROBUSTNESS REPORT
+================================================================================
+
+Kutatási kérdés:
+Megváltoztatja-e a preprocessing pipeline az Alzheimer-kórhoz kapcsolódó biológiai következtetéseket?
+
+Bizonyítéklánc:
+1. Group × Pipeline interakciók
+2. Pipeline-onkénti AD vs CN effektusméretek
+3. Effektusirány stabilitása
+4. Effektusméret-stabilitás
+5. Biomarker-rangsor stabilitása
+
+PRIMARY FEATURE: mean
+--------------------------------------------------------------------------------
+Interaction tests: 80
+FDR-significant Group×Pipeline interactions: 0/80 (0.0%)
+Same AD-CN effect direction across all pipelines: 87.5% (35/40)
+Mean absolute Hedges g across biomarkers: 0.449
+Mean absolute g range across pipelines: 0.148
+Mean ranking Spearman rho across pipeline pairs: 0.904
+
+TOP-K BIOMARKER OVERLAP, PRIMARY FEATURE
+--------------------------------------------------------------------------------
+Top 5: all-three overlap=3/5 (60.0%)
+Top 10: all-three overlap=8/10 (80.0%)
+Top 15: all-three overlap=12/15 (80.0%)
+
+FEATURE-LEVEL SUMMARY
+--------------------------------------------------------------------------------
+mean: interactions FDR-significant=0/80 (0.0%), same_direction=87.5%, mean_abs_g=0.449, mean_g_range=0.148, ranking_rho=0.904
+proximal_mean: interactions FDR-significant=2/78 (2.6%), same_direction=90.0%, mean_abs_g=0.515, mean_g_range=0.209, ranking_rho=0.828
+
+TOP STABLE BIOMARKER CANDIDATES, PRIMARY MEAN
+--------------------------------------------------------------------------------
+UF_right RD: mean_abs_g=1.033, range_abs_g=0.139, g_P01=0.993, g_P02=0.984, g_P03=1.123
+UF_right FA: mean_abs_g=0.949, range_abs_g=0.204, g_P01=-0.934, g_P02=-0.854, g_P03=-1.058
+UF_right MD: mean_abs_g=0.931, range_abs_g=0.134, g_P01=0.878, g_P02=0.902, g_P03=1.012
+UF_left FA: mean_abs_g=0.915, range_abs_g=0.164, g_P01=-0.987, g_P02=-0.823, g_P03=-0.934
+UF_left RD: mean_abs_g=0.894, range_abs_g=0.074, g_P01=0.930, g_P02=0.855, g_P03=0.897
+UF_left MD: mean_abs_g=0.774, range_abs_g=0.005, g_P01=0.777, g_P02=0.773, g_P03=0.772
+ILF_left RD: mean_abs_g=0.772, range_abs_g=0.075, g_P01=0.789, g_P02=0.726, g_P03=0.801
+ILF_left MD: mean_abs_g=0.749, range_abs_g=0.105, g_P01=0.779, g_P02=0.682, g_P03=0.787
+CG_left FA: mean_abs_g=0.743, range_abs_g=0.281, g_P01=-0.623, g_P02=-0.903, g_P03=-0.701
+CG_right FA: mean_abs_g=0.714, range_abs_g=0.304, g_P01=-0.733, g_P02=-0.856, g_P03=-0.552
+ILF_left AD: mean_abs_g=0.661, range_abs_g=0.157, g_P01=0.716, g_P02=0.559, g_P03=0.707
+CC_2 AD: mean_abs_g=0.659, range_abs_g=0.130, g_P01=0.726, g_P02=0.596, g_P03=0.654
+CG_right RD: mean_abs_g=0.638, range_abs_g=0.134, g_P01=0.687, g_P02=0.675, g_P03=0.553
+CG_left RD: mean_abs_g=0.591, range_abs_g=0.178, g_P01=0.495, g_P02=0.672, g_P03=0.605
+CC_2 MD: mean_abs_g=0.546, range_abs_g=0.134, g_P01=0.620, g_P02=0.485, g_P03=0.532
+
+INTERPRETÁCIÓS MEGJEGYZÉS
+--------------------------------------------------------------------------------
+Az RQ3 akkor támasztja alá a biológiai robusztusságot, ha kevés Group×Pipeline interakció szignifikáns, az effektusirányok nagyrészt azonosak, az effektusméretek stabilak, és a biomarker-rangsorok erősen korrelálnak a pipeline-ok között.
+
+Fontos: a nem szignifikáns interakció önmagában nem bizonyíték a robusztusságra. Ezért az értelmezés effektusméret-, irány- és rangsorstabilitási mutatókkal együtt történik.
+
+Kimeneti fájlok:
+- biomarker_ranking_stability.csv
+- direction_consistency.csv
+- effect_size_stability.csv
+- effect_sizes_by_pipeline.csv
+- group_pipeline_interactions.csv
+- rq3_feature_summary.csv
+- stable_biomarker_candidates_primary_mean.csv
+- top_biomarker_overlap.csv

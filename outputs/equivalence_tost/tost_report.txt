@@ -1,0 +1,26 @@
+TOST EQUIVALENCE REPORT
+================================================================================
+Margins: Hedges-g delta = 0.2 (pre-registered) and 0.1 (strict);
+AUC delta = 0.05. Aggregate level = biomarker as sampling unit,
+90% CI (alpha=0.05 per one-sided test). Equivalent if 90% CI is
+fully inside the margin.
+
+EFFECT-SIZE EQUIVALENCE (aggregate)
+--------------------------------------------------------------------------------
+  ALL    : mean dg=+0.019  90%CI[+0.000,+0.039]  equiv@0.2=True  equiv@0.1=True  (p_TOST@0.1=1.05e-10)
+  02-01  : mean dg=-0.007  90%CI[-0.046,+0.032]  equiv@0.2=True  equiv@0.1=True  (p_TOST@0.1=1.42e-04)
+  03-01  : mean dg=+0.029  90%CI[+0.000,+0.058]  equiv@0.2=True  equiv@0.1=True  (p_TOST@0.1=9.82e-05)
+  03-02  : mean dg=+0.036  90%CI[+0.004,+0.069]  equiv@0.2=True  equiv@0.1=True  (p_TOST@0.1=9.32e-04)
+
+DIAGNOSTIC (AUC) EQUIVALENCE (aggregate, margin 0.05)
+--------------------------------------------------------------------------------
+  ALL    : mean dAUC=+0.0036  90%CI[-0.0022,+0.0093]  equiv@0.05=True  (p_TOST=8.81e-26)
+  02-01  : mean dAUC=-0.0024  90%CI[-0.0130,+0.0081]  equiv@0.05=True  (p_TOST=1.64e-09)
+  03-01  : mean dAUC=+0.0053  90%CI[-0.0057,+0.0164]  equiv@0.05=True  (p_TOST=1.99e-08)
+  03-02  : mean dAUC=+0.0078  90%CI[-0.0009,+0.0165]  equiv@0.05=True  (p_TOST=2.62e-10)
+
+BIOMARKER LEVEL (within-subject bootstrap, margin 0.2)
+--------------------------------------------------------------------------------
+  Individually equivalent pair-tests: 22/120 (median 90% CI half-width = 0.196).
+  The biomarker-level test is under-powered (half-width ~ margin);
+  the aggregate test is the powered, primary equivalence result.

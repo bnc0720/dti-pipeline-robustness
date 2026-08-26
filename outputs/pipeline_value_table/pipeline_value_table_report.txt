@@ -1,0 +1,13 @@
+WHICH PIPELINE MOVES HOW MUCH (P01 = reference)
+================================================================
+Mean value produced by each pipeline, per metric (pooled over tracts & subjects).
+
+metric               P01       P02       P03   P02 vs P01 P03 vs P01
+FA (–)             0.471     0.459     0.444       -2.39%     -5.71%
+MD (x10^-3 mm2/s)     0.882     0.872     0.878       -1.11%     -0.47%
+RD (x10^-3 mm2/s)     0.633     0.633     0.647       +0.02%     +2.21%
+AD (x10^-3 mm2/s)     1.380     1.350     1.339       -2.14%     -2.92%
+
+Read-off: P03 produces the largest shift (FA -5.7%, AD -3.0%, RD +2.2%);
+P02 an intermediate one; MD barely moves under either pipeline.
+Full tract-level detail: pipeline_value_by_tract_metric.csv (40 rows).

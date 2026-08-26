@@ -1,0 +1,8 @@
+DIRECT COMMON-MODE TEST
+================================================================
+Units: signed symmetric relative shift (%), AD vs CN, per biomarker-pair (n=120).
+AD-shift vs CN-shift: Pearson r = 0.944; regression slope = 1.143 (identity = 1).
+Differential shift (AD - CN): mean = +0.065% (90% CI -0.090 to +0.220).
+Differential / shared shift (median ratio) = 0.348  -> group-specific part is ~35% of the shared shift.
+Shared shift explains 92.7% of the variance in group-specific shifts.
+Standardized differential (SD units): mean = +0.0206 (90% CI +0.0008 to +0.0404); margin 0.1 -> EQUIVALENT.

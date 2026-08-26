@@ -1,0 +1,5 @@
+metric,n_biomarkers,n_omnibus_fdr_significant,median_lr_statistic,min_omnibus_p_fdr,percent_omnibus_fdr_significant,n_pairwise_tests,n_pairwise_fdr_significant,percent_pairwise_fdr_significant
+AD,10,10,57.85070174253798,3.8286825552011084e-18,100.0,30,27,90.0
+FA,10,10,73.36611039957086,3.807184530341942e-30,100.0,30,29,96.66666666666667
+MD,10,4,3.166693828050427,1.8660199831141362e-08,40.0,30,8,26.666666666666668
+RD,10,10,27.3970973680116,1.837283118658084e-11,100.0,30,21,70.0

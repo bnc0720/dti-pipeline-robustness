@@ -1,0 +1,37 @@
+FEATURE SCREENING REPORT
+================================================================================
+
+Cél: a 6 tractometriai feature objektív összehasonlítása.
+
+Vizsgált feature-ek:
+- mean
+- median
+- sd
+- proximal_mean
+- middle_mean
+- distal_mean
+
+FEATURE-LEVEL SUMMARY
+--------------------------------------------------------------------------------
+mean: mean_abs_g=0.449, median_abs_g=0.397, mean_AUC=0.631, median_AUC=0.624, mean_CV=2.24%, pipeline_range=4.30%, rank_score=7
+proximal_mean: mean_abs_g=0.515, median_abs_g=0.453, mean_AUC=0.644, median_AUC=0.636, mean_CV=2.71%, pipeline_range=5.15%, rank_score=10
+middle_mean: mean_abs_g=0.457, median_abs_g=0.397, mean_AUC=0.629, median_AUC=0.613, mean_CV=2.63%, pipeline_range=5.05%, rank_score=11
+median: mean_abs_g=0.392, median_abs_g=0.352, mean_AUC=0.616, median_AUC=0.609, mean_CV=2.34%, pipeline_range=4.47%, rank_score=14
+sd: mean_abs_g=0.437, median_abs_g=0.376, mean_AUC=0.625, median_AUC=0.591, mean_CV=10.00%, pipeline_range=19.07%, rank_score=20
+distal_mean: mean_abs_g=0.347, median_abs_g=0.302, mean_AUC=0.602, median_AUC=0.584, mean_CV=3.42%, pipeline_range=6.52%, rank_score=22
+
+INTERPRETÁCIÓS MEGJEGYZÉS
+--------------------------------------------------------------------------------
+Az overall_rank_score csak előszűrő mutató. Nem tekintendő formális statisztikai tesztnek. Célja annak feltárása, hogy mely feature-ek érdemesek fő elemzésre.
+
+A mean/median/sd feature-ek globális tractus-összefoglalók, míg a proximal_mean, middle_mean és distal_mean along-tract lokalizációs feature-ek. Ezeket az értelmezésben külön kategóriaként kell kezelni.
+
+Kimeneti fájlok:
+- auc_all_features.csv
+- effect_sizes_all_features.csv
+- feature_level_summary.csv
+- feature_screening_summary.csv
+- pipeline_sensitivity_all_features.csv
+- reproducibility_cv_all_features.csv
+- top10_auc_by_feature.csv
+- top10_effects_by_feature.csv

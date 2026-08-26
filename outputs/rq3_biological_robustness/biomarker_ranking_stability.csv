@@ -1,0 +1,7 @@
+feature,pipeline_1,pipeline_2,n_biomarkers,spearman_rho_abs_g_ranking,p_value
+mean,pipeline_01,pipeline_02,40,0.8787992495309569,8.963596921395672e-14
+mean,pipeline_01,pipeline_03,40,0.9219512195121953,3.080690478629949e-17
+mean,pipeline_02,pipeline_03,40,0.9103189493433398,3.8913901554147667e-16
+proximal_mean,pipeline_01,pipeline_02,40,0.8037523452157599,4.255469840511746e-10
+proximal_mean,pipeline_01,pipeline_03,40,0.7840525328330207,2.175887645860665e-09
+proximal_mean,pipeline_02,pipeline_03,40,0.8964352720450284,5.295464186840901e-15

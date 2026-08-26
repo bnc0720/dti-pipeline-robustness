@@ -1,0 +1,72 @@
+MASTER CSV QC REPORT
+================================================================================
+
+Input file: C:\Users\bence\Desktop\DTI_pipeline_robustness_reanalysis\data\all_pipelines_tractometry_features_master.csv
+Total rows: 3600
+Total columns: 11
+
+DATASET STRUCTURE
+--------------------------------------------------------------------------------
+Number of subjects: 30
+Groups: ['AD', 'CN']
+Number of groups: 2
+Pipelines: ['pipeline_01', 'pipeline_02', 'pipeline_03']
+Number of pipelines: 3
+Number of tracts: 10
+Tracts: ['CC_2', 'CC_7', 'CG_left', 'CG_right', 'IFO_left', 'IFO_right', 'ILF_left', 'ILF_right', 'UF_left', 'UF_right']
+Number of metrics: 4
+Metrics: ['AD', 'FA', 'MD', 'RD']
+
+GROUP COUNTS
+--------------------------------------------------------------------------------
+AD: 15 subjects
+CN: 15 subjects
+
+EXPECTED COMPLETENESS
+--------------------------------------------------------------------------------
+Expected combinations: 3600
+Observed unique combinations: 3600
+Missing combinations: 0
+
+MISSING VALUES
+--------------------------------------------------------------------------------
+subject: 0 missing (0.00%)
+group: 0 missing (0.00%)
+pipeline: 0 missing (0.00%)
+tract: 0 missing (0.00%)
+metric: 0 missing (0.00%)
+mean: 0 missing (0.00%)
+median: 0 missing (0.00%)
+sd: 0 missing (0.00%)
+proximal_mean: 0 missing (0.00%)
+middle_mean: 0 missing (0.00%)
+distal_mean: 0 missing (0.00%)
+
+DUPLICATES
+--------------------------------------------------------------------------------
+Duplicate rows: 0
+
+NUMERIC SANITY CHECK
+--------------------------------------------------------------------------------
+mean: NaN=0, Inf=0, min=0.0004769952308396, max=0.6685473167223899
+median: NaN=0, Inf=0, min=0.0004779877335774, max=0.7113770547172931
+sd: NaN=0, Inf=0, min=1.0902537477286476e-05, max=0.1624810596330052
+proximal_mean: NaN=0, Inf=0, min=0.0004156820430272, max=0.7368642993410947
+middle_mean: NaN=0, Inf=0, min=0.000353472904821, max=0.7781289872491179
+distal_mean: NaN=0, Inf=0, min=0.0004713277024984, max=0.6163868879620815
+
+QC STATUS
+--------------------------------------------------------------------------------
+PASS: No missing combinations, duplicate rows, or missing values detected.
+
+Generated output files:
+- completeness_check.csv
+- duplicate_rows.csv
+- feature_value_summary.csv
+- group_counts.csv
+- metric_counts.csv
+- missing_values.csv
+- numeric_sanity_check.csv
+- pipeline_counts.csv
+- subject_counts.csv
+- tract_counts.csv

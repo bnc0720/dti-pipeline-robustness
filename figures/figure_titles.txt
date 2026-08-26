@@ -1,0 +1,30 @@
+FIGURE TITLES AND PANEL CAPTIONS
+(kept out of the figure images; use as figure captions / titles)
+========================================================================
+
+[fig_variance_decomposition]
+  Title: Variance decomposition: biological signal dominates pipeline-induced variability
+
+[fig_rq3_effectsize_stability]
+  Title: Alzheimer-related effect sizes are robust to pipeline choice
+  Panel A: Effect-size stability across pipelines
+  Panel B: Biomarker concordance (pipeline 01 vs 03)
+
+[fig_rq4_auc_stability]
+  Title: Diagnostic performance is stable across pipelines
+
+[fig_rq4_roc_robust]
+  Title: ROC curves of the most robust biomarkers coincide across pipelines
+
+[fig_tost_equivalence]
+  Title: Aggregate equivalence: pipeline differences fall within negligible margins
+  Panel A: Effect-size equivalence (Delta Hedges g between pipelines)
+  Panel B: Diagnostic equivalence (Delta AUC between pipelines)
+
+[fig_rq2_pipeline_effect]
+  Title: Preprocessing systematically shifts absolute DTI values (RQ2)
+  Panel A: Pipeline 03 vs 01 - signed relative value shift
+  Panel B: Direction and magnitude of the shift by metric
+
+[fig_supp_icc_comparison]
+  Title: Reproducibility under consistency vs absolute agreement (ICC)

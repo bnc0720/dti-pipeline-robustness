@@ -1,0 +1,17 @@
+# Reproducibility environment for the DTI pipeline-robustness analysis.
+# Python 3.10+ recommended (verified on Python 3.10).
+#
+# The independent reconstruction (statlib.py + scripts 07-10) and all figures
+# require ONLY the three pinned packages below, and were verified to reproduce
+# every headline number with these exact versions:
+numpy==2.2.6
+pandas==2.3.3
+matplotlib==3.10.9
+#
+# The primary analysis scripts (01-06) additionally use the following packages
+# (SciPy for ICC/correlation tests, statsmodels for the mixed models, and
+# scikit-learn for ROC/AUC). Pin to the versions used in your environment; the
+# minimums below are known to be compatible:
+scipy>=1.10
+statsmodels>=0.14
+scikit-learn>=1.3

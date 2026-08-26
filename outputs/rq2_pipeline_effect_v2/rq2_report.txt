@@ -1,0 +1,86 @@
+RQ2 PIPELINE EFFECT REPORT – REVISED PRIMARY ANALYSIS
+========================================================================================
+
+Kutatási kérdés:
+Megváltoztatja-e a preprocessing pipeline az abszolút DTI-értékeket?
+
+Primer feature:
+mean
+
+Primer teljes modell:
+mean ~ C(group) + C(pipeline) + (1|subject)
+
+Primer redukált modell:
+mean ~ C(group) + (1|subject)
+
+Primer teszt:
+ML likelihood-ratio omnibus pipeline-teszt, df=2; BH-FDR a 40 tractus × metrika tesztre.
+Numerikus stabilitás: FA ×10^2, AD/RD/MD ×10^5 skálán; az exportált fő becslések eredeti egységre visszaalakítva.
+
+PRIMER OMNIBUS EREDMÉNY
+----------------------------------------------------------------------------------------
+FDR-szignifikáns biomarkerek: 34/40 (85.0%)
+
+AD: 10/10 (100.0%), min FDR=3.83e-18
+FA: 10/10 (100.0%), min FDR=3.81e-30
+RD: 10/10 (100.0%), min FDR=1.84e-11
+MD: 4/10 (40.0%), min FDR=1.87e-08
+
+SZEKUNDER MODELLALAPÚ PAIRWISE KONTRASZTOK
+----------------------------------------------------------------------------------------
+FDR-szignifikáns kontrasztok: 85/120 (70.8%)
+FDR family: mind a 120 pairwise modellkontraszt együtt.
+
+AD P02-P01: 10/10 (100.0%), median estimate=-1.71544e-05, min FDR=5.34e-24
+AD P03-P01: 10/10 (100.0%), median estimate=-3.45498e-05, min FDR=5.41e-41
+AD P03-P02: 7/10 (70.0%), median estimate=-1.34912e-05, min FDR=5.44e-12
+FA P02-P01: 9/10 (90.0%), median estimate=-0.0111974, min FDR=4.24e-26
+FA P03-P01: 10/10 (100.0%), median estimate=-0.0280974, min FDR=1.67e-127
+FA P03-P02: 10/10 (100.0%), median estimate=-0.0150033, min FDR=1.08e-39
+MD P02-P01: 3/10 (30.0%), median estimate=-2.88375e-06, min FDR=4.47e-11
+MD P03-P01: 3/10 (30.0%), median estimate=-9.78438e-07, min FDR=1.87e-07
+MD P03-P02: 2/10 (20.0%), median estimate=2.05831e-06, min FDR=0.000153
+RD P02-P01: 5/10 (50.0%), median estimate=4.2516e-06, min FDR=2.39e-08
+RD P03-P01: 8/10 (80.0%), median estimate=1.48463e-05, min FDR=5e-18
+RD P03-P02: 8/10 (80.0%), median estimate=1.14899e-05, min FDR=9.52e-10
+
+DESKRIPTÍV SIGNED SZIMMETRIKUS RELATÍV ELTÉRÉSEK
+----------------------------------------------------------------------------------------
+AD P02-P01: tract-mediánok mediánja=-1.60%, IQR=-1.85–-1.31%
+AD P03-P01: tract-mediánok mediánja=-2.95%, IQR=-3.26–-2.21%
+AD P03-P02: tract-mediánok mediánja=-1.04%, IQR=-1.53–-0.34%
+FA P02-P01: tract-mediánok mediánja=-2.84%, IQR=-3.39–-2.40%
+FA P03-P01: tract-mediánok mediánja=-5.70%, IQR=-6.48–-5.00%
+FA P03-P02: tract-mediánok mediánja=-3.29%, IQR=-4.01–-2.31%
+MD P02-P01: tract-mediánok mediánja=-0.27%, IQR=-1.56–0.03%
+MD P03-P01: tract-mediánok mediánja=-0.26%, IQR=-0.40–-0.05%
+MD P03-P02: tract-mediánok mediánja=0.01%, IQR=-0.20–0.48%
+RD P02-P01: tract-mediánok mediánja=0.85%, IQR=-0.62–1.35%
+RD P03-P01: tract-mediánok mediánja=2.24%, IQR=2.04–2.93%
+RD P03-P02: tract-mediánok mediánja=1.53%, IQR=0.94–1.85%
+
+MODELLDIAGNOSZTIKA
+----------------------------------------------------------------------------------------
+Sikertelen modellpárok: 0/40
+Nem konvergált teljes modellek: 0/40
+Nem konvergált redukált modellek: 0/40
+A warningok, optimizer-próbálkozások, random intercept variancia és reziduális variancia a rq2_model_diagnostics.csv fájlban szerepelnek.
+
+ÉRTELMEZÉSI KERET
+----------------------------------------------------------------------------------------
+Az omnibus teszt azt vizsgálja, hogy a diagnosztikai csoportra korrigálva van-e bármilyen általános különbség a három pipeline között.
+A pairwise modellkontrasztok azt mutatják, hogy mely pipeline-párok között, milyen irányú és mekkora eltérés becsülhető.
+A signed szimmetrikus relatív eltérések deskriptív, subject-szintű hatásnagyságok; nem helyettesítik a mixed-model inferenciát.
+A Group × Pipeline interakció nem része az RQ2 primer modelljének; annak vizsgálata és biológiai értelmezése az RQ3 feladata.
+
+KIMENETI FÁJLOK
+----------------------------------------------------------------------------------------
+- rq2_model_diagnostics.csv
+- rq2_omnibus_pipeline_tests.csv
+- rq2_pairwise_metric_summary.csv
+- rq2_pairwise_model_contrasts.csv
+- rq2_primary_metric_summary.csv
+- rq2_primary_tract_summary.csv
+- rq2_relative_change_metric_summary.csv
+- rq2_signed_relative_changes.csv
+- rq2_report.txt
