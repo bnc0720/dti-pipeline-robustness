@@ -1,7 +1,7 @@
 MASTER CSV QC REPORT
 ================================================================================
 
-Input file: C:\Users\bence\Desktop\DTI_pipeline_robustness_reanalysis\data\all_pipelines_tractometry_features_master.csv
+Input file: data/all_pipelines_tractometry_features_master.csv
 Total rows: 3600
 Total columns: 11
 

@@ -198,7 +198,7 @@ def roc_curve(scores, lab):
 def fig_roc():
     sel = [("UF_right", "RD"), ("UF_left", "RD"), ("UF_right", "MD"), ("UF_left", "MD"), ("UF_right", "FA"), ("UF_left", "FA")]
     fig, axes = plt.subplots(2, 3, figsize=(7.2, 5.0))
-    for ax, (tr, me) in zip(axes.ravel(), sel):
+    for _i, (ax, (tr, me)) in enumerate(zip(axes.ravel(), sel)):
         M = mat(tr, me)
         ax.plot([0, 1], [0, 1], ls=(0, (4, 4)), color=GREY, lw=0.8)
         _ls = ["-", (0, (5, 2)), (0, (1.3, 1.5))]
@@ -207,6 +207,7 @@ def fig_roc():
             fpr, tpr, auc = roc_curve(M[:, j], labels)
             ax.step(fpr, tpr, where="post", color=_pc[j], lw=1.7, ls=_ls[j], label=f"{p}  {auc:.2f}", solid_capstyle="round")
         ax.text(0.5, 1.02, f"{tr}_{DISP[me]}", ha="center", va="bottom", fontsize=8, fontweight="bold", transform=ax.transAxes)
+        panel(ax, "ABCDEF"[_i])
         ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.set_aspect("equal")
         ax.set_xticks([0, 0.5, 1]); ax.set_yticks([0, 0.5, 1])
         ax.legend(loc="lower right", frameon=False, fontsize=6.6, handlelength=1.0, labelspacing=0.3, borderpad=0.2)

@@ -169,6 +169,7 @@ for ax, m in zip(top, METRICS):
     ax.text(0.5, 1.135, f"\u0394P03\u2212P01 = {shift:+.1f}%", transform=ax.transAxes, ha="center", va="bottom", fontsize=6.8, color="#666")
     ax.text(0.5, 1.01, f"ranking G {r.G1:.2f}   \u00b7   absolute \u03a6 {r.Phi1:.2f}", transform=ax.transAxes, ha="center", va="bottom", fontsize=7.0, color="#1a1a1a", fontweight="bold")
     despine(ax, offset=3)
+panel(top[0], "A")
 fig.legend(handles=[Line2D([0], [0], color=GC["AD"], lw=2.4, marker="o", ms=5, label="AD group mean"),
                     Line2D([0], [0], color=GC["CN"], lw=2.4, marker="o", ms=5, label="CN group mean")],
            loc="upper center", bbox_to_anchor=(0.5, 1.04), ncol=2, frameon=False, fontsize=8.2)
@@ -191,6 +192,7 @@ axd.text(0.0, 1.05, "D-study \u2014 averaging pipelines recovers absolute depend
          transform=axd.transAxes, ha="left", va="bottom", fontsize=6.8, color="#555")
 axd.legend(loc="lower right", ncol=4, frameon=False, fontsize=7.4, columnspacing=1.1, handlelength=1.5)
 despine(axd, offset=3)
+panel(axd, "B")
 fig.tight_layout(rect=(0, 0.0, 1, 0.97))
 for ext in ("png", "pdf", "svg"):
     fig.savefig(FIG / f"fig_gtheory.{ext}", dpi=600 if ext == "png" else None, bbox_inches="tight", facecolor="white")
